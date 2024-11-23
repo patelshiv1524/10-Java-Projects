@@ -1,0 +1,101 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Restaurant Name -->
+        <TextView
+            android:id="@+id/text_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Restaurant Name"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Restaurant Address -->
+        <TextView
+            android:id="@+id/text_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Address"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Restaurant Phone -->
+        <TextView
+            android:id="@+id/text_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Phone"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Restaurant Description -->
+        <TextView
+            android:id="@+id/text_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Description"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Tags -->
+        <TextView
+            android:id="@+id/text_tags"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tags"
+            android:textSize="16sp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- View on Map Button -->
+
+
+        <RatingBar
+            android:id="@+id/detail_rating_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:isIndicator="false"
+            android:numStars="5"
+            android:rating="0"
+            android:stepSize="1.0" />
+
+        
+
+        <Button
+            android:id="@+id/btn_view_map"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="View on Map"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Get Directions Button -->
+        <Button
+            android:id="@+id/btn_get_directions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Get Directions" />
+
+        <!-- Share Button -->
+        <Button
+            android:id="@+id/btn_share"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="Share"
+            android:backgroundTint="#931919"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:padding="12dp" />
+
+
+    </LinearLayout>
+</ScrollView>
