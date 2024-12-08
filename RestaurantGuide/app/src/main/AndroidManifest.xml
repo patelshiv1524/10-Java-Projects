@@ -22,7 +22,7 @@
         <!-- Google Maps API Key -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyCaOJB5esfNDN9UOrhhOgLJ2fOaRloqHP0" />
+            android:value="ADD YOUR OWN API" />
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
