@@ -8,4 +8,11 @@
     <item name="app_name" type="id" />
     <item name="logo" type="id" />
     <item name="quote" type="id" />
+    <item name="btn_save_changes" type="id" />
+    <item name="btn_show" type="id" />
+    <item name="btn_add_restaurant" type="id" />
+    <item name="btn_show_restaurants" type="id" />
+    <item name="text_title" type="id" />
+    <item name="text_version" type="id" />
+    <item name="text_about" type="id" />
 </resources>

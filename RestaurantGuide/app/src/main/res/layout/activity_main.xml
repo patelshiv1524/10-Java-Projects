@@ -1,75 +1,146 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:background="@color/white"
     android:padding="16dp">
 
-    <!-- Restaurant Name Input -->
-    <EditText
-        android:id="@+id/input_name"
-        android:layout_width="match_parent"
+    <!-- Header Section -->
+    <TextView
+        android:id="@+id/text_app_title"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="Restaurant Name"
-        android:inputType="text" />
+        android:text="Restaurant Guide"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp" />
 
-    <!-- Restaurant Address Input -->
-    <EditText
-        android:id="@+id/input_address"
-        android:layout_width="match_parent"
+    <!-- Card Grid Layout -->
+    <TextView
+        android:id="@+id/text_app_subtitle"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="Restaurant Address"
-        android:inputType="textPostalAddress" />
+        android:layout_marginTop="8dp"
+        android:text="Your one-stop guide to all the best restaurants"
+        android:textColor="@android:color/system_tertiary_container_dark"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_app_title" />
 
-    <!-- Restaurant Phone Input -->
-    <EditText
-        android:id="@+id/input_phone"
+    <androidx.gridlayout.widget.GridLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Phone Number"
-        android:inputType="phone" />
+        android:layout_height="0dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@id/text_app_subtitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:rowCount="2"
+        app:columnCount="2">
 
-    <!-- Description Input -->
-    <EditText
-        android:id="@+id/input_description"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Description"
-        android:inputType="textMultiLine" />
+        <!-- Add Restaurant Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_add_restaurant"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp"
+            app:layout_rowWeight="1"
+            app:layout_columnWeight="1">
 
-    <!-- Tags Input -->
-    <EditText
-        android:id="@+id/input_tags"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Tags (e.g., Vegan, Italian)"
-        android:inputType="text" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="16dp">
 
-    <!-- Save Button -->
-    <Button
-        android:id="@+id/btn_save"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Save Restaurant" />
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/ic_add_restaurant" />
 
-    <!-- Show Restaurants Button -->
-    <Button
-        android:id="@+id/btn_show"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Show Restaurants (Toast)" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add Restaurant"
+                    android:textSize="16sp"
+                    android:layout_marginTop="8dp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
-    <!-- Add Restaurant Button -->
-    <Button
-        android:id="@+id/btn_add_restaurant"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Add Restaurant" />
+        <!-- View Restaurants Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_restaurants"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp"
+            app:layout_rowWeight="1"
+            app:layout_columnWeight="1">
 
-    <!-- Show Restaurants in RecyclerView Button -->
-    <Button
-        android:id="@+id/btn_show_restaurants"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Show Restaurants" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="16dp">
 
-</LinearLayout>
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/ic_restaurant_list" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="View Restaurants"
+                    android:textSize="16sp"
+                    android:layout_marginTop="8dp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <!-- About Us Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_about_us"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp"
+            app:layout_rowWeight="1"
+            app:layout_columnWeight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/ic_about_us" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="About Us"
+                    android:textSize="16sp"
+                    android:layout_marginTop="8dp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </androidx.gridlayout.widget.GridLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

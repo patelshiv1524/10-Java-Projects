@@ -39,14 +39,16 @@ dependencies {
     //Google API's Dependencies For Google Maps
     implementation("com.google.android.gms:play-services-maps:18.1.0")
     implementation("com.google.android.gms:play-services-location:21.0.1")
+    implementation ("com.google.android.libraries.places:places:2.6.0")
+
 
     // Room Database Dependencies for Java
     implementation("androidx.room:room-runtime:2.5.0")
+    implementation(libs.gridlayout)
     annotationProcessor("androidx.room:room-compiler:2.5.0")
 
     // RecyclerView Dependency
     implementation("androidx.recyclerview:recyclerview:1.3.1")
-
     implementation ("androidx.appcompat:appcompat:1.6.1")
     implementation ("androidx.fragment:fragment:1.5.7")
     implementation ("androidx.lifecycle:lifecycle-runtime-ktx:2.6.1")

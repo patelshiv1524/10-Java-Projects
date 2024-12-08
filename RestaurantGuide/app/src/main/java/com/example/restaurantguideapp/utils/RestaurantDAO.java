@@ -26,4 +26,7 @@ public interface RestaurantDAO {
     @Query("SELECT * FROM restaurants WHERE name = :name LIMIT 1")
     Restaurant getRestaurantByName(String name);
 
+    @Query("SELECT * FROM restaurants WHERE id = :id")
+    Restaurant getRestaurantById(int id);
+
 }
